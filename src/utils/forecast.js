@@ -11,10 +11,10 @@ const forecast = (lat, long, callback)=> {
         if (error){
             callback("There is no connection!", undefined);
         } else if (body.error){
-            callback("There was an error while getting the data!");
+            callback("There was an error while getting the data!", undefined);
         } else {
             const data = body.currently;
-            callback(undefined, body.daily.data[0].summary + " It's currently " + data.temperature + " degrees out. There is a " + data.precipProbability + "% chance of rain.");
+            callback(undefined, body.daily.data[0].summary + " It's currently " + data.temperature + " degrees out. There is a " + data.precipProbability + "% chance of rain. The temperature high for today will be " + body.daily.data[0].temperatureMax + " degrees, and the low is expected to be " + body.daily.data[0].temperatureMin + " degrees.");
         }
     });
 }
