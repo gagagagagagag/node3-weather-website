@@ -45,7 +45,7 @@ app.get("/help", (req, res) => {
     res.render("help", {
         title: "Help",
         name: "Jakub Przywara",
-        helpText: "No one will help you dumbass."
+        helpText: "No one will help you dumbass. Maciek to pedal"
     });
 });
 
